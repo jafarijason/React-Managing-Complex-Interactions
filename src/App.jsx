@@ -7,7 +7,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggleLogo: false,
+            toggleLogo: true,
             cards: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 },],
 
         }
@@ -24,11 +24,14 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                {/* <h1 class="animate__animated animate__bounce">An animated element</h1> */}
                 <header className="App-header">
                     <img src={logo}
-                        className={this.state.toggleLogo ? 'static-logo' : 'animated-logo'}
+                        className={this.state.toggleLogo ? 'static-logo' : 'static-logo animate__animated animate__jello'}
                         alt="logo"
-                        onClick={this.toggleLogo}
+                        // onClick={this.toggleLogo}
+                        onMouseEnter={this.toggleLogo}
+                        onMouseLeave={this.toggleLogo}
                     />
 
 
